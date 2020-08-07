@@ -206,16 +206,21 @@
 		width: 68px;
 		height: 66px;
 		padding-top: 5px;
-		color: $color-blue;
+		color: #999;
 		font-size: 14px;
 		font-family: $font-heebo-regular;
 		line-height: 21px;
 		border: 1px solid #D3D3D3;
 		border-radius: 4px;
+		transition: .2s;
 
 		&-icon {
 			width: 27px;
 			height: 27px;
+		}
+
+		&:hover svg {
+			fill: #045FAF;
 		}
 	}
 
@@ -223,8 +228,11 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		background-color: $bg-gray;
+		background-color: $bg-gray-light;
 		padding: 0 0 0 16px;
+		-webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.0956);
+		-moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.0956);
+		box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.0956);
 	}
 
 	&__nav {
@@ -233,7 +241,7 @@
 
 	&__search {
 		position: relative;
-		width: 32%;
+		width: 33%;
 		height: 36px;
 
 		.search {
@@ -259,6 +267,11 @@
 		input[type="search"]::-webkit-search-cancel-button,
 		input[type="search"]::-webkit-search-results-button,
 		input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+		::-webkit-input-placeholder { color: $color-gray; }
+		::-moz-placeholder          { color: $color-gray; } 
+		:-moz-placeholder           { color: $color-gray; } 
+		:-ms-input-placeholder      { color: $color-gray; }
 	}
 
 	.nav-list {
@@ -273,7 +286,7 @@
 			transition: .2s;
 
 			&:hover {
-				border: 1px solid #757575;
+				border-bottom: 1px solid #757575;
 				background-color: #D8D8D8;
 			}
 
@@ -304,7 +317,7 @@
 		}
 
 		.icon-box {
-			width: 34px;
+			width: 30px;
 			height: 37px;
 			display: flex;
 			align-items: center;

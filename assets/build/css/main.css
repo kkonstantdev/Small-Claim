@@ -285,29 +285,33 @@ a {
   width: 68px;
   height: 66px;
   padding-top: 5px;
-  color: #045FAF;
+  color: #999;
   font-size: 14px;
   font-family: "Heebo-Regular";
   line-height: 21px;
   border: 1px solid #D3D3D3;
-  border-radius: 4px; }
+  border-radius: 4px;
+  transition: .2s; }
   .header .logout-icon {
     width: 27px;
     height: 27px; }
+  .header .logout:hover svg {
+    fill: #045FAF; }
 
 .header__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.0956);
-  padding: 0 0 0 16px; }
+  background-color: rgba(216, 216, 216, 0.23);
+  padding: 0 0 0 16px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.0956); }
 
 .header__nav {
   width: 66%; }
 
 .header__search {
   position: relative;
-  width: 32%;
+  width: 33%;
   height: 36px; }
   .header__search .search {
     width: 100%;
@@ -329,6 +333,14 @@ a {
   .header__search input[type="search"]::-webkit-search-results-button,
   .header__search input[type="search"]::-webkit-search-results-decoration {
     display: none; }
+  .header__search ::-webkit-input-placeholder {
+    color: #9E9E9E; }
+  .header__search ::-moz-placeholder {
+    color: #9E9E9E; }
+  .header__search :-moz-placeholder {
+    color: #9E9E9E; }
+  .header__search :-ms-input-placeholder {
+    color: #9E9E9E; }
 
 .header .nav-list {
   display: flex;
@@ -340,7 +352,7 @@ a {
     border: 1px solid transparent;
     transition: .2s; }
     .header .nav-list__item:hover {
-      border: 1px solid #757575;
+      border-bottom: 1px solid #757575;
       background-color: #D8D8D8; }
     .header .nav-list__item.active {
       font-family: "Heebo-Bold";
@@ -360,7 +372,7 @@ a {
     color: #000;
     font-family: "Heebo-Medium"; }
   .header .nav-list .icon-box {
-    width: 34px;
+    width: 30px;
     height: 37px;
     display: flex;
     align-items: center; }
